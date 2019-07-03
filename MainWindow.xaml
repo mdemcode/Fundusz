@@ -29,7 +29,7 @@
                 </LinearGradientBrush>
             </StackPanel.Background>
             <Label Margin="20" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="24">Gotówka</Label>
-            <Label Margin="10" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="30" FontWeight="Bold">999 999,00 zł</Label>
+            <Label x:Name="GotowkaLabel" Margin="10" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="30" FontWeight="Bold">999 999,00 zł</Label>
         </StackPanel>
 
         <StackPanel Margin="2" Grid.Row="1" Grid.Column="1">
@@ -40,7 +40,7 @@
                 </LinearGradientBrush>
             </StackPanel.Background>
             <Label Margin="20" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="24">Pożyczki</Label>
-            <Label Margin="10" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="30" FontWeight="Bold">999 999,00 zł</Label>
+            <Label x:Name="PozyczkiLabel" Margin="10" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="30" FontWeight="Bold">999 999,00 zł</Label>
         </StackPanel>
 
         <StackPanel Margin="2" Grid.Row="1" Grid.Column="2">
@@ -51,7 +51,7 @@
                 </LinearGradientBrush>
             </StackPanel.Background>
             <Label Margin="20" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="24">Lokaty</Label>
-            <Label Margin="10" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="30" FontWeight="Bold">999 999,00 zł</Label>
+            <Label x:Name="LokatyLabel" Margin="10" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="30" FontWeight="Bold">999 999,00 zł</Label>
         </StackPanel>
 
         <StackPanel Margin="2" Grid.Row="1" Grid.Column="3">
@@ -62,11 +62,11 @@
                 </LinearGradientBrush>
             </StackPanel.Background>
             <Label Margin="20" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="24">Inwestycje</Label>
-            <Label Margin="10" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="30" FontWeight="Bold">999 999,00 zł</Label>
+            <Label x:Name="InwestycjeLabel" Margin="10" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="30" FontWeight="Bold">999 999,00 zł</Label>
         </StackPanel>
 
         <Label Margin="5" VerticalAlignment="Center" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" VerticalContentAlignment="Center" HorizontalAlignment="Right" HorizontalContentAlignment="Center" FontSize="30" FontStyle="Italic">ŁĄCZNE ŚRODKI FUNDUSZU:</Label>
-        <Label VerticalAlignment="Center" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="35" FontWeight="Bold" FontStyle="Italic">999 999,00 zł</Label>
+        <Label x:Name="LacznieLabel" VerticalAlignment="Center" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="35" FontWeight="Bold" FontStyle="Italic">999 999,00 zł</Label>
 
         <Button x:Name="ZamknijButton" Grid.Row="4" Grid.Column="3" Height="35" Width="70" Margin="10" Content="Zamknij" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="ZamknijButton_Click"></Button>
     </Grid>
