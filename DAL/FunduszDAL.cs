@@ -5,34 +5,42 @@ using System.Text;
 using System.Threading.Tasks;
 using FunduszModel;
 
-namespace Fundusz.DAL
-{
-    public sealed class FunduszDAL
-    {
-        public double Gotowka { get; set; }
-        public double Pozyczki { get; set; }
-        public double Lokaty { get; set; }
-        public double InneInwestycje { get; set; }
+namespace Fundusz.DAL {
+    public sealed class FunduszDAL {
 
-        private static FunduszDAL _daneFunduszu = null;
-        public FunduszDAL DaneFunduszu {
+        public FunduszModel.Fundusz DaneFunduszu {
             get {
-                if (_daneFunduszu == null) {
-                    _daneFunduszu = new FunduszDAL();
+                return CzytajDane();
+            }
+            set {
+                ZapiszDane(value);
+            }
+        }
+
+        private static FunduszDAL _instancja = null;
+        public static FunduszDAL Instancja {
+            get {
+                if (_instancja == null) {
+                    _instancja = new FunduszDAL();
                 }
-                return _daneFunduszu;
+                return _instancja;
             }
         }
         private FunduszDAL() {
             //Konstruktor blokujący możliwość utworzenia obiektu FunduszDAL w normalny sposob (wzorzec SINGLETON)
         }
-        public void CzytajDane()
-        {
 
+        public FunduszModel.Fundusz CzytajDane() {
+            var dane = new FunduszModel.Fundusz();
+            dane.Pozyczki = 90000;
+            dane.Lokaty = 111000;
+            dane.Gotowka = 5000;
+            dane.InneInwestycje = 123000;
+                //TODO
+            return dane; 
         }
-        public void ZapiszDane()
-        {
-
+        public void ZapiszDane(FunduszModel.Fundusz daneFunduszu) {
+            
         }
     }
 }

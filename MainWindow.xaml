@@ -4,9 +4,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Fundusz"
+        xmlns:vm="clr-namespace:Fundusz.ModelWidoku"
         mc:Ignorable="d"
         Title="FUNDUSZ RODZINNY" Height="500" Width="1000" Left="50" Top="50" Background="#FF4696BB" AllowsTransparency="True" WindowStyle="None">
-    <Grid>
+    <Window.Resources>
+        <vm:FunduszModelWidoku x:Key="daneFunduszu" />
+    </Window.Resources>
+    <Grid DataContext="{StaticResource daneFunduszu}">
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"></RowDefinition>
             <RowDefinition Height="3*"></RowDefinition>
@@ -29,7 +33,7 @@
                 </LinearGradientBrush>
             </StackPanel.Background>
             <Label Margin="20" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="24">Gotówka</Label>
-            <Label x:Name="GotowkaLabel" Margin="10" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="30" FontWeight="Bold">999 999,00 zł</Label>
+            <Label x:Name="GotowkaLabel" Margin="10" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="30" FontWeight="Bold" Content="{Binding Gotowka}"/>
         </StackPanel>
 
         <StackPanel Margin="2" Grid.Row="1" Grid.Column="1">
@@ -40,7 +44,7 @@
                 </LinearGradientBrush>
             </StackPanel.Background>
             <Label Margin="20" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="24">Pożyczki</Label>
-            <Label x:Name="PozyczkiLabel" Margin="10" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="30" FontWeight="Bold">999 999,00 zł</Label>
+            <Label x:Name="PozyczkiLabel" Margin="10" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="30" FontWeight="Bold" Content="{Binding Pozyczki}"/>
         </StackPanel>
 
         <StackPanel Margin="2" Grid.Row="1" Grid.Column="2">
@@ -51,7 +55,7 @@
                 </LinearGradientBrush>
             </StackPanel.Background>
             <Label Margin="20" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="24">Lokaty</Label>
-            <Label x:Name="LokatyLabel" Margin="10" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="30" FontWeight="Bold">999 999,00 zł</Label>
+            <Label x:Name="LokatyLabel" Margin="10" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="30" FontWeight="Bold" Content="{Binding Lokaty}"/>
         </StackPanel>
 
         <StackPanel Margin="2" Grid.Row="1" Grid.Column="3">
@@ -62,7 +66,7 @@
                 </LinearGradientBrush>
             </StackPanel.Background>
             <Label Margin="20" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="24">Inwestycje</Label>
-            <Label x:Name="InwestycjeLabel" Margin="10" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="30" FontWeight="Bold">999 999,00 zł</Label>
+            <Label x:Name="InwestycjeLabel" Margin="10" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="30" FontWeight="Bold" Content="{Binding InneInwestycje}"/>
         </StackPanel>
 
         <Label Margin="5" VerticalAlignment="Center" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" VerticalContentAlignment="Center" HorizontalAlignment="Right" HorizontalContentAlignment="Center" FontSize="30" FontStyle="Italic">ŁĄCZNE ŚRODKI FUNDUSZU:</Label>
