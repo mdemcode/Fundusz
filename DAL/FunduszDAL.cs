@@ -39,7 +39,7 @@ namespace Fundusz.DAL {
                 //TODO
             return dane; 
         }
-        public void ZapiszDane(FunduszModel.Fundusz daneFunduszu) {
+        public void ZapiszDane(FunduszModel.Fundusz noweDane) {
             
         }
     }
