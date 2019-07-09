@@ -40,6 +40,9 @@
     <Reference Include="FunduszModel">
       <HintPath>..\FunduszModel\bin\Debug\FunduszModel.dll</HintPath>
     </Reference>
+    <Reference Include="Powiadomienia">
+      <HintPath>..\MojeBiblioteki\Powiadomienia\bin\Debug\Powiadomienia.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -60,6 +63,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Konwertery\DecimalToStringWalutaKonwerter.cs" />
     <Compile Include="Widoki\Testowy.xaml.cs">
       <DependentUpon>Testowy.xaml</DependentUpon>
     </Compile>

@@ -9,6 +9,7 @@
         Title="FUNDUSZ RODZINNY" Height="500" Width="1000" Left="50" Top="50" Background="#FF4696BB" AllowsTransparency="True" WindowStyle="None">
     <Window.Resources>
         <vm:FunduszModelWidoku x:Key="daneFunduszu" />
+        <local:DecimalToStringWalutaKonwerter x:Key="konwersjaDoStringWaluta" />
     </Window.Resources>
     <Grid DataContext="{StaticResource daneFunduszu}">
         <Grid.RowDefinitions>
@@ -33,7 +34,7 @@
                 </LinearGradientBrush>
             </StackPanel.Background>
             <Label Margin="20" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="24">Gotówka</Label>
-            <Label x:Name="GotowkaLabel" Margin="10" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="30" FontWeight="Bold" Content="{Binding Gotowka}"/>
+            <Label x:Name="GotowkaLabel" Margin="5" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="30" FontWeight="Bold" Content="{Binding Gotowka, Converter={StaticResource konwersjaDoStringWaluta}}"/>
         </StackPanel>
 
         <StackPanel Margin="2" Grid.Row="1" Grid.Column="1">
@@ -44,7 +45,7 @@
                 </LinearGradientBrush>
             </StackPanel.Background>
             <Label Margin="20" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="24">Pożyczki</Label>
-            <Label x:Name="PozyczkiLabel" Margin="10" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="30" FontWeight="Bold" Content="{Binding Pozyczki}"/>
+            <Label x:Name="PozyczkiLabel" Margin="5" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="30" FontWeight="Bold" Content="{Binding Pozyczki, Converter={StaticResource konwersjaDoStringWaluta}}"/>
         </StackPanel>
 
         <StackPanel Margin="2" Grid.Row="1" Grid.Column="2">
@@ -55,7 +56,7 @@
                 </LinearGradientBrush>
             </StackPanel.Background>
             <Label Margin="20" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="24">Lokaty</Label>
-            <Label x:Name="LokatyLabel" Margin="10" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="30" FontWeight="Bold" Content="{Binding Lokaty}"/>
+            <Label x:Name="LokatyLabel" Margin="5" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="30" FontWeight="Bold" Content="{Binding Lokaty, Converter={StaticResource konwersjaDoStringWaluta}}"/>
         </StackPanel>
 
         <StackPanel Margin="2" Grid.Row="1" Grid.Column="3">
@@ -66,11 +67,11 @@
                 </LinearGradientBrush>
             </StackPanel.Background>
             <Label Margin="20" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="24">Inwestycje</Label>
-            <Label x:Name="InwestycjeLabel" Margin="10" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="30" FontWeight="Bold" Content="{Binding InneInwestycje}"/>
+            <Label x:Name="InwestycjeLabel" Margin="5" VerticalContentAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="30" FontWeight="Bold" Content="{Binding InneInwestycje, Converter={StaticResource konwersjaDoStringWaluta}}"/>
         </StackPanel>
 
         <Label Margin="5" VerticalAlignment="Center" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" VerticalContentAlignment="Center" HorizontalAlignment="Right" HorizontalContentAlignment="Center" FontSize="30" FontStyle="Italic">ŁĄCZNE ŚRODKI FUNDUSZU:</Label>
-        <Label x:Name="LacznieLabel" VerticalAlignment="Center" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="35" FontWeight="Bold" FontStyle="Italic" Content="{Binding LacznaKwota}"/>
+        <Label x:Name="LacznieLabel" VerticalAlignment="Center" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2" VerticalContentAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontSize="35" FontWeight="Bold" FontStyle="Italic" Content="{Binding LacznaKwota, Converter={StaticResource konwersjaDoStringWaluta}}"/>
 
         <Button x:Name="TestButton" Grid.Row="4" Grid.Column="0" Height="35" Width="70" Margin="10" Content="Test" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="TestButton_Click" />
 

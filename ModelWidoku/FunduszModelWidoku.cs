@@ -8,9 +8,9 @@ using System.Windows;
 using Fundusz.DAL;
 
 namespace Fundusz.ModelWidoku {
-    public class FunduszModelWidoku : Powiadomienia {
+    public class FunduszModelWidoku : Powiadomienia.Powiadomienia {
 
-        private readonly FunduszModel.Fundusz daneFunduszu; 
+        private readonly FunduszModel.Fundusz daneFunduszu = FunduszDAL.DaneFunduszu.CzytajDane();
 
         public decimal Gotowka {
             get {
@@ -59,7 +59,6 @@ namespace Fundusz.ModelWidoku {
 
         //KONSTRUKTOR
         public FunduszModelWidoku() {
-            daneFunduszu = FunduszDAL.DaneFunduszu.CzytajDane();
         }
 
         public void Testowy() {
