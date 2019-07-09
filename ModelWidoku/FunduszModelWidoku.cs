@@ -18,7 +18,7 @@ namespace Fundusz.ModelWidoku {
             }
             set {
                 daneFunduszu.Gotowka = value;
-                OnPropertyChanged(nameof(Gotowka), nameof(LacznaKwota));
+                OnPropertyChanged(nameof(Gotowka));
             }
         }
         public decimal Pozyczki {
@@ -27,7 +27,7 @@ namespace Fundusz.ModelWidoku {
             }
             set {
                 daneFunduszu.Pozyczki = value;
-                OnPropertyChanged(nameof(Pozyczki), nameof(LacznaKwota));
+                OnPropertyChanged(nameof(Pozyczki));
             }
         }
         public decimal Lokaty {
@@ -36,7 +36,7 @@ namespace Fundusz.ModelWidoku {
             }
             set {
                 daneFunduszu.Lokaty = value;
-                OnPropertyChanged(nameof(Lokaty), nameof(LacznaKwota));
+                OnPropertyChanged(nameof(Lokaty));
             }
         }
         public decimal InneInwestycje { 
@@ -45,21 +45,13 @@ namespace Fundusz.ModelWidoku {
             }
             set {
                 daneFunduszu.InneInwestycje = value;
-                OnPropertyChanged(nameof(InneInwestycje), nameof(LacznaKwota));
-            }
-        }
-        public decimal LacznaKwota {
-            get {
-                return daneFunduszu.Gotowka 
-                        + daneFunduszu.Pozyczki 
-                        + daneFunduszu.Lokaty 
-                        + daneFunduszu.InneInwestycje;
+                OnPropertyChanged(nameof(InneInwestycje));
             }
         }
 
         //KONSTRUKTOR
-        public FunduszModelWidoku() {
-        }
+        //public FunduszModelWidoku() {
+        //}
 
         public void Testowy() {
             Widoki.Testowy testPozyczki = new Widoki.Testowy(this);
