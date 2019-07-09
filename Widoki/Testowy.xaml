@@ -1,0 +1,14 @@
+﻿<Window x:Class="Fundusz.Widoki.Testowy"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Fundusz.Widoki"
+        mc:Ignorable="d"
+        Title="Testowy"  Height="500" Width="1000" Left="50" Top="50" Background="#FF4696BB" AllowsTransparency="True" WindowStyle="None">
+    <Grid>
+        <Button x:Name="ZmienKwoteButton" Content="Zmień Kwotę Pożyczek" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="151" Height="60" Click="ZmienKwoteButton_Click"/>
+        <Button x:Name="ZamknijButton" Content="Zamknij" HorizontalAlignment="Left" Height="48" Margin="866,442,0,0" VerticalAlignment="Top" Width="124" Click="ZamknijButton_Click"/>
+
+    </Grid>
+</Window>

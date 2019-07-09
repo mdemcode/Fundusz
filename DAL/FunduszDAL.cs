@@ -21,7 +21,7 @@ namespace Fundusz.DAL {
             }
         }
         private FunduszDAL() {
-            //Konstruktor blokujący możliwość utworzenia obiektu FunduszDAL w normalny sposob (wzorzec SINGLETON)
+            //Konstruktor blokujący możliwość utworzenia obiektu FunduszDAL w normalny sposob (wzorzec SINGLETON) (?? chyba :) )
         }
 
         public FunduszModel.Fundusz CzytajDane() {
@@ -42,7 +42,7 @@ namespace Fundusz.DAL {
             return dane;
         }
 
-        public void ZapiszDane(FunduszModel.Fundusz noweDane) { //NIE DZIAŁA
+        public void ZapiszDane(FunduszModel.Fundusz noweDane) {
             string[] dane = new string[4];
             dane[0] = noweDane.Gotowka.ToString();
             dane[1] = noweDane.Pozyczki.ToString();

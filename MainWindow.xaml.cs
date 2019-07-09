@@ -29,18 +29,22 @@ namespace Fundusz
 
         private void ZamknijButton_Click(object sender, RoutedEventArgs e)
         {
+            //var dane = Resources["daneFunduszu"] as FunduszModelWidoku;
+            //FunduszDAL.DaneFunduszu.ZapiszDane(dane.daneFunduszu);
             Close();
         }
 
         private void TestButton_Click(object sender, RoutedEventArgs e)
         {
-            var daneFun = new FunduszModel.Fundusz {
-                Gotowka = 111m,
-                Pozyczki = 222m,
-                Lokaty = 333m,
-                InneInwestycje = 444m
-            };
-            FunduszDAL.DaneFunduszu.ZapiszDane(daneFun);
+            var test = Resources["daneFunduszu"] as FunduszModelWidoku;
+            test.Testowy();
+            //var daneFun = new FunduszModel.Fundusz {
+            //    Gotowka = 111m,
+            //    Pozyczki = 222m,
+            //    Lokaty = 333m,
+            //    InneInwestycje = 444m
+            //};
+            //FunduszDAL.DaneFunduszu.ZapiszDane(daneFun);
         }
     }
 }
