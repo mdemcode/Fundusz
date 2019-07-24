@@ -4,14 +4,15 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Fundusz"
+        xmlns:widoki="clr-namespace:Fundusz.Widoki"
         xmlns:vm="clr-namespace:Fundusz.ModelWidoku"
         mc:Ignorable="d"
         Title="FUNDUSZ RODZINNY" Height="500" Width="1000" Left="50" Top="50" Background="#FF4696BB" AllowsTransparency="True" WindowStyle="None">
     
     <Window.Resources>
         <vm:FunduszModelWidoku x:Key="daneFunduszu" />
-        <local:DecimalToStringWalutaKonwerter x:Key="konwersjaDoStringWaluta" />
-        <local:SumaSkladowychKonwerter x:Key="konwersjaSkladowychDoSumy" />
+        <widoki:DecimalToStringWalutaKonwerter x:Key="konwersjaDoStringWaluta" />
+        <widoki:SumaSkladowychKonwerter x:Key="konwersjaSkladowychDoSumy" />
     </Window.Resources>
     
     <Grid DataContext="{StaticResource daneFunduszu}">

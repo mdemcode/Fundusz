@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using Fundusz.DAL;
+﻿using Fundusz.DAL;
 
-namespace Fundusz.ModelWidoku {
+namespace Fundusz.ModelWidoku
+{
     public class FunduszModelWidoku : Powiadomienia.Powiadomienia {
 
         private readonly FunduszModel.Fundusz daneFunduszu = FunduszDAL.DaneFunduszu.CzytajDane();
@@ -48,10 +42,6 @@ namespace Fundusz.ModelWidoku {
                 OnPropertyChanged(nameof(InneInwestycje));
             }
         }
-
-        //KONSTRUKTOR
-        //public FunduszModelWidoku() {
-        //}
 
         public void Testowy() {
             Widoki.Testowy testPozyczki = new Widoki.Testowy(this);

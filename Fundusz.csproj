@@ -65,6 +65,7 @@
     </ApplicationDefinition>
     <Compile Include="Konwertery\DecimalToStringWalutaKonwerter.cs" />
     <Compile Include="Konwertery\SumaSkladowychKonwerter.cs" />
+    <Compile Include="Widoki\Konwertery.cs" />
     <Compile Include="Widoki\Testowy.xaml.cs">
       <DependentUpon>Testowy.xaml</DependentUpon>
     </Compile>
