@@ -1,4 +1,5 @@
 ﻿using Fundusz.DAL;
+using System.Windows.Input;
 
 namespace Fundusz.ModelWidoku
 {
@@ -42,6 +43,19 @@ namespace Fundusz.ModelWidoku
                 OnPropertyChanged(nameof(InneInwestycje));
             }
         }
+
+        #region POLECENIA
+        private ICommand polecenieTestowe;
+        public ICommand PolecenieTestowe {
+            get {
+                if (polecenieTestowe==null) {
+                    polecenieTestowe = new Polecenia(argument => { Testowy(); }, argument => { return true; } );
+                }
+                return polecenieTestowe;
+            }
+        }
+
+        #endregion
 
         public void Testowy() {
             Widoki.Testowy testPozyczki = new Widoki.Testowy(this);
