@@ -4,11 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Fundusz.Widoki"
+        xmlns:mw="clr-namespace:Fundusz.ModelWidoku"
         mc:Ignorable="d"
         Title="Testowy"  Height="500" Width="1000" Left="50" Top="50" Background="#FF4696BB" AllowsTransparency="True" WindowStyle="None">
-    <Grid>
-        <Button x:Name="ZmienKwoteButton" Content="Zmień Kwotę Pożyczek" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="151" Height="60" Click="ZmienKwoteButton_Click"/>
+
+    <Grid DataContext="{StaticResource daneFunduszu}">
+        <Button x:Name="ZmienKwoteButton" Content="Zmień Kwotę Pożyczek" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="151" Height="60" Command="{Binding PolecenieTest}"/>
         <Button x:Name="ZamknijButton" Content="Zamknij" HorizontalAlignment="Left" Height="48" Margin="866,442,0,0" VerticalAlignment="Top" Width="124" Click="ZamknijButton_Click"/>
+        <Label x:Name="label1" Content="{Binding Gotowka}" HorizontalAlignment="Left" Margin="406,223,0,0" VerticalAlignment="Top" FontSize="48"/>
 
     </Grid>
 </Window>

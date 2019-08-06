@@ -10,7 +10,7 @@
         Title="FUNDUSZ RODZINNY" Height="500" Width="1000" Left="50" Top="50" Background="#FF4696BB" AllowsTransparency="True" WindowStyle="None">
     
     <Window.Resources>
-        <vm:FunduszModelWidoku x:Key="daneFunduszu" />
+        <!-- <vm:FunduszModelWidoku x:Key="daneFunduszu" /> -->
         <widoki:DecimalToStringWalutaKonwerter x:Key="konwersjaDoStringWaluta" />
         <widoki:SumaSkladowychKonwerter x:Key="konwersjaSkladowychDoSumy" />
     </Window.Resources>

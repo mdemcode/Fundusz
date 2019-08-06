@@ -1,8 +1,8 @@
 ﻿using Fundusz.DAL;
+using System.Windows;
 using System.Windows.Input;
 
-namespace Fundusz.ModelWidoku
-{
+namespace Fundusz.ModelWidoku {
     public class FunduszModelWidoku : Powiadomienia.Powiadomienia {
 
         private readonly FunduszModel.Fundusz daneFunduszu = FunduszDAL.DaneFunduszu.CzytajDane();
@@ -55,10 +55,27 @@ namespace Fundusz.ModelWidoku
             }
         }
 
+        private ICommand polecenieTest;
+        public ICommand PolecenieTest {
+            get {
+                if (polecenieTest == null) {
+                    polecenieTest = new Polecenia(argument => { Test2(); }, argument => { return true; });
+                }
+                return polecenieTest;
+            }
+        }
         #endregion
 
+        public void Test2() {
+            MessageBox.Show("Zmieniam dane");
+            Gotowka = 1000m;
+            Pozyczki = 2000m;
+            Lokaty = 3000m;
+            InneInwestycje = 4000m;
+        }
+
         public void Testowy() {
-            Widoki.Testowy testPozyczki = new Widoki.Testowy(this);
+            Widoki.Testowy testPozyczki = new Widoki.Testowy();
             testPozyczki.ShowDialog();
         }
     }
